@@ -7,18 +7,31 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+h2 {
+  margin: 0;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: whitesmoke;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 .modal {
+  position: absolute;
+  align-self: center;
+  top: 25%;
+  background-color: white;
   display: flex;
   flex-direction: column;
-  width: 40vw;
-  height: 50vh;
-  border: 2px solid black;
-  margin: 0 auto;
+  width: 45vw;
+  height: min-content;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px 2px lightgray;
 }
 .closeBtn {
   margin-left: auto;
@@ -28,12 +41,55 @@ code {
 .modalTitle {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  height: 100%;
+}
+.modalBody {
+  line-height: 1.75rem;
+}
+.modalBoldText {
+  padding-top: 2rem;
+  font-weight: bold;
 }
 .modalTitle > h1 {
   width: 100%;
 }
+.all {
+  display: flex;
+  height: 100%;
+  padding: 2rem;
+}
 .tagIcon {
-  margin-right: auto;
   margin-left: 1rem;
   color: blue;
+  margin-right: 1rem;
+  align-self: flex-start;
+}
+.btn {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  margin-right: 0.5rem;
+}
+.primaryBtn {
+  background-color: rgba(0, 0, 255, 80%);
+  color: white;
+}
+.modalButtons {
+  display: flex;
+  width: 100%;
+  height: min-content;
+}
+.primaryBtn:hover {
+  background-color: rgba(0, 0, 255, 100%);
+  cursor: pointer;
+}
+.cancelBtn {
+  background-color: white;
+  border: none;
+}
+.cancelBtn:hover {
+  cursor: pointer;
+  background-color: whitesmoke;
 }
