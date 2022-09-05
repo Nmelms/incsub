@@ -73,7 +73,7 @@ code {
   margin-right: 0.5rem;
 }
 .primaryBtn {
-  background-color: rgba(0, 0, 255, 80%);
+  background-color: rgba(2, 117, 216, 80%);
   color: white;
 }
 .modalButtons {
@@ -82,7 +82,7 @@ code {
   height: min-content;
 }
 .primaryBtn:hover {
-  background-color: rgba(0, 0, 255, 100%);
+  background-color: rgba(2, 117, 216, 100%);
   cursor: pointer;
 }
 .cancelBtn {

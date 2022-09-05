@@ -2,7 +2,7 @@ import React from "react";
 import { faTags } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function Modal() {
+export default function Modal({ setShowSurvey }) {
   return (
     <div className="modal">
       <div className="closeBtn">X</div>
@@ -26,7 +26,12 @@ export default function Modal() {
           </body>
           <div className="modalButtons">
             <button className="primaryBtn btn">50% off for 6 monthhs</button>
-            <button className="cancelBtn btn">No thanks, ill cancel</button>
+            <button
+              onClick={() => setShowSurvey(true)}
+              className="cancelBtn btn"
+            >
+              No thanks, ill cancel
+            </button>
           </div>
         </div>
       </div>
