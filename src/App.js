@@ -7,10 +7,12 @@ function App() {
   const [showSurvey, setShowSurvey] = useState(false);
   return (
     <div className="App">
-      <div className></div>
+      <div></div>
       <h2>My Account</h2>
       {!showSurvey && <Modal setShowSurvey={setShowSurvey} />}
-      {showSurvey && <Survey />}
+      {showSurvey && (
+        <Survey showSurvey={showSurvey} setShowSurvey={setShowSurvey} />
+      )}
     </div>
   );
 }

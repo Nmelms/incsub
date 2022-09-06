@@ -10,6 +10,9 @@ body {
 h2 {
   margin: 0;
 }
+h3 {
+  margin: 0;
+}
 .App {
   display: flex;
   flex-direction: column;
@@ -92,4 +95,65 @@ code {
 .cancelBtn:hover {
   cursor: pointer;
   background-color: whitesmoke;
+}
+.survey {
+  width: 70vw;
+  height: 100%;
+  align-self: center;
+}
+.surveyNav {
+  border-bottom: 1px solid gray;
+  vertical-align: center;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  margin-bottom: 1.5rem;
+}
+.backIcon {
+  padding: 1rem;
+}
+.form {
+  background-color: white;
+}
+.surveyHeader {
+  text-align: center;
+}
+.surveyBody {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.surveyForm {
+  display: flex;
+  flex-direction: column;
+}
+.radioItem {
+  border: 1px solid black;
+  width: 50vw;
+  padding: 0.5rem;
+  margin: 1rem;
+  border-radius: 15px;
+  color: red;
+  accent-color: blue;
+  background-color: lightblue;
+}
+.radioItem > label {
+  color: blue;
+}
+.radioLabel {
+  margin: 0.5rem;
+  border: 1px solid black;
+
+  padding: 1rem;
+  max-width: 100%;
+  accent-color: blue;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  border-radius: 25px;
+}
+.radioLabel:hover {
+  cursor: pointer;
+  background-color: lightBlue;
 }
