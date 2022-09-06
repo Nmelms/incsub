@@ -115,6 +115,7 @@ code {
 }
 .form {
   background-color: white;
+  border-radius: 10px;
 }
 .surveyHeader {
   text-align: center;
@@ -145,7 +146,6 @@ code {
 .radioLabel {
   margin: 0.5rem;
   border: 1px solid black;
-
   padding: 1rem;
   max-width: 100%;
   accent-color: blue;
@@ -156,4 +156,10 @@ code {
 .radioLabel:hover {
   cursor: pointer;
   background-color: lightBlue;
+}
+.alert {
+  border-radius: 5px;
+  margin-top: 2rem;
+  display: flex;
+  background-color: rgb(255, 0, 0, 20%);
 }

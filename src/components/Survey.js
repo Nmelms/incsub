@@ -1,6 +1,7 @@
 import React from "react";
 import { faSquareCaretLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Alert from "./Alert.js";
 import RadioItem from "./RadioItem";
 
 export default function Survey({ setShowSurvey, showSurvey }) {
@@ -54,6 +55,7 @@ export default function Survey({ setShowSurvey, showSurvey }) {
             />
             <RadioItem id={"other"} value={"other"} text={"other"} />
           </form>
+          <Alert />
         </body>
       </div>
     </div>
