@@ -159,7 +159,19 @@ code {
 }
 .alert {
   border-radius: 5px;
-  margin-top: 2rem;
+  margin: 2rem 4rem 2rem 4rem;
   display: flex;
   background-color: rgb(255, 0, 0, 20%);
+}
+.surveyBtns {
+  display: flex;
+  justify-content: flex-end;
+}
+.backBtn {
+  display: flex;
+  align-items: center;
+  width: min-content;
+}
+.backBtn > svg {
+  padding-right: 0.5rem;
 }

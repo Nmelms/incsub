@@ -1,10 +1,14 @@
-import React from "react";
-import { faSquareCaretLeft } from "@fortawesome/free-solid-svg-icons";
+import React, { useRef } from "react";
+import {
+  faSquareCaretLeft,
+  faArrowLeft,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Alert from "./Alert.js";
 import RadioItem from "./RadioItem";
 
 export default function Survey({ setShowSurvey, showSurvey }) {
+  const btnRef = useRef();
   return (
     <div className="survey">
       <nav className="surveyNav">
@@ -24,38 +28,58 @@ export default function Survey({ setShowSurvey, showSurvey }) {
         <body className="surveyBody">
           <form className="surveyForm">
             <RadioItem
+              btnRef={btnRef}
               id={"membership"}
               value={"membership"}
               text={"I didnt realize it was a reoccuring membership"}
             />
             <RadioItem
+              btnRef={btnRef}
               id={"solution"}
               value={"solution"}
               text={"Found a better solution"}
             />
             <RadioItem
+              btnRef={btnRef}
               id={"price"}
               value={"price"}
               text={"its too expensive"}
             />
             <RadioItem
+              btnRef={btnRef}
               id={"bugs"}
               value={"bugs"}
               text={"bugs, things not working properly"}
             />
             <RadioItem
+              btnRef={btnRef}
               id={"pugin"}
               value={"plugin"}
               text={"I just want to pay for a single plugin"}
             />
             <RadioItem
+              btnRef={btnRef}
               id={"wordpress"}
               value={"wordpress"}
               text={"Not using WordPress anymore"}
             />
-            <RadioItem id={"other"} value={"other"} text={"other"} />
+            <RadioItem
+              btnRef={btnRef}
+              id={"other"}
+              value={"other"}
+              text={"other"}
+            />
           </form>
           <Alert />
+          <div className="surveyBtns">
+            <button onClick={() => setShowSurvey(false)} className="backBtn">
+              <FontAwesomeIcon icon={faArrowLeft} />
+              Back
+            </button>
+            <button ref={btnRef} disabled={true}>
+              cancel membership
+            </button>
+          </div>
         </body>
       </div>
     </div>
