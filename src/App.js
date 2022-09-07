@@ -7,8 +7,8 @@ function App() {
   const [showSurvey, setShowSurvey] = useState(false);
   return (
     <div className="App">
-      <div></div>
-      <h2>My Account</h2>
+      <div className="banner"></div>
+
       {!showSurvey && <Modal setShowSurvey={setShowSurvey} />}
       {showSurvey && (
         <Survey showSurvey={showSurvey} setShowSurvey={setShowSurvey} />

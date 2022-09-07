@@ -16,7 +16,7 @@ h3 {
 .App {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
   background-color: whitesmoke;
 }
 
@@ -97,9 +97,14 @@ code {
   background-color: whitesmoke;
 }
 .survey {
-  width: 70vw;
+  width: 60vw;
   height: 100%;
   align-self: center;
+}
+.banner {
+  min-height: 7vh;
+  width: 100vw;
+  background-color: black;
 }
 .surveyNav {
   border-bottom: 1px solid gray;
@@ -144,18 +149,26 @@ code {
   color: blue;
 }
 .radioLabel {
+  display: flex;
   margin: 0.5rem;
   border: 1px solid black;
-  padding: 1rem;
+  padding: 4rem;
+  min-height: min-content;
   max-width: 100%;
   accent-color: blue;
   margin-left: 4rem;
   margin-right: 4rem;
   border-radius: 25px;
+  padding: 1rem;
 }
 .radioLabel:hover {
   cursor: pointer;
   background-color: lightBlue;
+}
+.radioIcon {
+  margin-right: 0.5rem;
+  display: flex;
+  justify-content: center;
 }
 .alert {
   border-radius: 5px;
@@ -166,6 +179,7 @@ code {
 .surveyBtns {
   display: flex;
   justify-content: flex-end;
+  margin: 1rem;
 }
 .backBtn {
   display: flex;
@@ -174,4 +188,7 @@ code {
 }
 .backBtn > svg {
   padding-right: 0.5rem;
+}
+.radioBtn {
+  transform: scale(1.5);
 }

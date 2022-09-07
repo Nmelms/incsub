@@ -26,7 +26,7 @@ export default function Survey({ setShowSurvey, showSurvey }) {
           <p>Can you tell us why you want to cancel your membership?</p>
         </header>
         <body className="surveyBody">
-          <form className="surveyForm">
+          <ul className="surveyForm">
             <RadioItem
               btnRef={btnRef}
               id={"membership"}
@@ -69,14 +69,17 @@ export default function Survey({ setShowSurvey, showSurvey }) {
               value={"other"}
               text={"other"}
             />
-          </form>
+          </ul>
           <Alert />
-          <div className="surveyBtns">
-            <button onClick={() => setShowSurvey(false)} className="backBtn">
+          <div className=" surveyBtns">
+            <button
+              onClick={() => setShowSurvey(false)}
+              className="btn backBtn"
+            >
               <FontAwesomeIcon icon={faArrowLeft} />
               Back
             </button>
-            <button ref={btnRef} disabled={true}>
+            <button className="btn" ref={btnRef} disabled={true}>
               cancel membership
             </button>
           </div>
