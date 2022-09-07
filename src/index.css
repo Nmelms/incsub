@@ -13,6 +13,9 @@ h2 {
 h3 {
   margin: 0;
 }
+ul {
+  padding: 0;
+}
 .App {
   display: flex;
   flex-direction: column;
@@ -97,6 +100,7 @@ code {
 }
 .confirmBtn {
   background-color: red;
+  margin-right: 4rem;
 }
 .confirmBtn:disabled {
   background-color: lightgrey;
@@ -116,6 +120,7 @@ code {
   background-color: black;
 }
 .surveyNav {
+  padding: 1rem 1rem 1rem 0;
   border-bottom: 1px solid gray;
   vertical-align: center;
   height: 50px;
@@ -125,22 +130,28 @@ code {
   margin-bottom: 1.5rem;
 }
 .backIcon {
-  padding: 1rem;
+  padding: 1rem 1rem 1rem 0;
+}
+.backIcon:hover {
+  cursor: pointer;
 }
 .form {
   background-color: white;
   border-radius: 10px;
 }
 .surveyHeader {
+  padding-top: 4rem;
   text-align: center;
 }
 .surveyBody {
   background-color: white;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
 .surveyForm {
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -159,14 +170,12 @@ code {
 }
 .radioLabel {
   display: flex;
-  margin: 0.5rem;
+  margin: 1rem 4rem 1rem 4rem;
   border: 1px solid black;
   padding: 4rem;
   min-height: min-content;
   max-width: 100%;
   accent-color: blue;
-  margin-left: 4rem;
-  margin-right: 4rem;
   border-radius: 25px;
   padding: 1rem;
 }
@@ -180,6 +189,7 @@ code {
   justify-content: center;
 }
 .alert {
+  padding-right: 1rem;
   border-radius: 5px;
   margin: 2rem 4rem 2rem 4rem;
   display: flex;
@@ -187,8 +197,10 @@ code {
 }
 .surveyBtns {
   display: flex;
+  width: 100%;
+  max-width: 100%;
   justify-content: flex-end;
-  margin: 1rem;
+  margin: 2rem;
 }
 .backBtn {
   display: flex;
