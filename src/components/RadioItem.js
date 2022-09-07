@@ -1,8 +1,12 @@
 import React from "react";
 
-export default function RadioItem({ id, value, text, btnRef }) {
+export default function RadioItem({ id, value, text, btnRef, setConditional }) {
   return (
-    <label className="radioLabel" htmlFor={id}>
+    <label
+      onClick={() => setConditional(value)}
+      className="radioLabel"
+      htmlFor={id}
+    >
       <div className="radioIcon">
         <input
           className="radioBtn"

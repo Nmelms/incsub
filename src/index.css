@@ -214,3 +214,8 @@ code {
   transform: scale(1.5);
   padding-right: 0.5rem;
 }
+.solutionTextArea {
+  margin: 0 4rem 0 4rem;
+  height: 10vh;
+  resize: vertical;
+}

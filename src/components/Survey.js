@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import {
   faSquareCaretLeft,
   faArrowLeft,
@@ -8,6 +8,9 @@ import Alert from "./Alert.js";
 import RadioItem from "./RadioItem";
 
 export default function Survey({ setShowSurvey, showSurvey }) {
+  const [response, setResponse] = useState();
+  const [conditional, setConditional] = useState();
+  console.log(conditional);
   const btnRef = useRef();
   return (
     <div className="survey">
@@ -26,50 +29,69 @@ export default function Survey({ setShowSurvey, showSurvey }) {
           <p>Can you tell us why you want to cancel your membership?</p>
         </header>
         <body className="surveyBody">
-          <ul className="surveyForm">
+          <form className="surveyForm">
             <RadioItem
+              setConditional={setConditional}
               btnRef={btnRef}
               id={"membership"}
               value={"membership"}
               text={"I didnt realize it was a reoccuring membership"}
             />
             <RadioItem
+              setConditional={setConditional}
               btnRef={btnRef}
               id={"solution"}
               value={"solution"}
               text={"Found a better solution"}
             />
+            {conditional === "solution" && (
+              <textarea
+                name={"cancel_membership"}
+                onChange={(e) => {
+                  console.log("cahnge");
+                }}
+                className="solutionTextArea"
+              >
+                what is the better solution? If you dont mind sharing. Your
+                feedback is much appreciated!
+              </textarea>
+            )}
             <RadioItem
+              setConditional={setConditional}
               btnRef={btnRef}
               id={"price"}
               value={"price"}
               text={"its too expensive"}
             />
             <RadioItem
+              setConditional={setConditional}
               btnRef={btnRef}
               id={"bugs"}
               value={"bugs"}
               text={"bugs, things not working properly"}
             />
             <RadioItem
+              setConditional={setConditional}
               btnRef={btnRef}
               id={"pugin"}
               value={"plugin"}
               text={"I just want to pay for a single plugin"}
             />
             <RadioItem
+              setConditional={setConditional}
               btnRef={btnRef}
               id={"wordpress"}
               value={"wordpress"}
               text={"Not using WordPress anymore"}
             />
             <RadioItem
+              setConditional={setConditional}
               btnRef={btnRef}
               id={"other"}
               value={"other"}
               text={"other"}
             />
-          </ul>
+          </form>
           <Alert />
           <div className=" surveyBtns">
             <button
