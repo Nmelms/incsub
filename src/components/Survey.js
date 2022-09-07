@@ -79,7 +79,7 @@ export default function Survey({ setShowSurvey, showSurvey }) {
               <FontAwesomeIcon icon={faArrowLeft} />
               Back
             </button>
-            <button className="btn" ref={btnRef} disabled={true}>
+            <button className="btn confirmBtn" ref={btnRef} disabled={true}>
               cancel membership
             </button>
           </div>

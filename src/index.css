@@ -75,6 +75,9 @@ code {
   border: none;
   margin-right: 0.5rem;
 }
+.btn:hover {
+  cursor: pointer;
+}
 .primaryBtn {
   background-color: rgba(2, 117, 216, 80%);
   color: white;
@@ -91,6 +94,12 @@ code {
 .cancelBtn {
   background-color: white;
   border: none;
+}
+.confirmBtn {
+  background-color: red;
+}
+.confirmBtn:disabled {
+  background-color: lightgrey;
 }
 .cancelBtn:hover {
   cursor: pointer;
@@ -166,7 +175,7 @@ code {
   background-color: lightBlue;
 }
 .radioIcon {
-  margin-right: 0.5rem;
+  margin-right: 1rem;
   display: flex;
   justify-content: center;
 }
@@ -191,4 +200,5 @@ code {
 }
 .radioBtn {
   transform: scale(1.5);
+  padding-right: 0.5rem;
 }
