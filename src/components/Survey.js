@@ -6,6 +6,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Alert from "./Alert.js";
 import RadioItem from "./RadioItem";
+import Bugs from "./Bugs";
 
 export default function Survey({ setShowSurvey, showSurvey }) {
   const [response, setResponse] = useState();
@@ -70,6 +71,7 @@ export default function Survey({ setShowSurvey, showSurvey }) {
               value={"bugs"}
               text={"bugs, things not working properly"}
             />
+            {conditional === "bugs" && <Bugs />}
             <RadioItem
               setConditional={setConditional}
               btnRef={btnRef}
@@ -91,20 +93,25 @@ export default function Survey({ setShowSurvey, showSurvey }) {
               value={"other"}
               text={"other"}
             />
+            <Alert />
+            <div className=" surveyBtns">
+              <button
+                onClick={() => setShowSurvey(false)}
+                className="btn backBtn"
+              >
+                <FontAwesomeIcon icon={faArrowLeft} />
+                Back
+              </button>
+              <button
+                type="submit"
+                className="btn confirmBtn"
+                ref={btnRef}
+                disabled={true}
+              >
+                cancel membership
+              </button>
+            </div>
           </form>
-          <Alert />
-          <div className=" surveyBtns">
-            <button
-              onClick={() => setShowSurvey(false)}
-              className="btn backBtn"
-            >
-              <FontAwesomeIcon icon={faArrowLeft} />
-              Back
-            </button>
-            <button className="btn confirmBtn" ref={btnRef} disabled={true}>
-              cancel membership
-            </button>
-          </div>
         </body>
       </div>
     </div>
