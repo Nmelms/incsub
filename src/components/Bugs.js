@@ -1,16 +1,21 @@
-import React, { useDebugValue, useEffect, useState } from "react";
+import React, { useDebugValue, useEffect, useState, useRef } from "react";
 
 export default function Bugs() {
   const [showDropDown, setShowDropDown] = useState(false);
   const [checkedItems, setCheckedItems] = useState([]);
+  const inputRef = useRef();
 
   const handleClick = () => {
     console.log("click");
     setShowDropDown(!showDropDown);
   };
   useEffect(() => {
-    console.log(checkedItems);
-  }, [checkedItems]);
+    if (showDropDown || checkedItems.length > 0) {
+      inputRef.current.classList.add("active");
+    } else {
+      inputRef.current.classList.remove("active");
+    }
+  }, [checkedItems, showDropDown]);
 
   const handleCheck = (e) => {
     const { value, checked } = e.target;
@@ -29,7 +34,11 @@ export default function Bugs() {
       <div className="bugs">
         <p>What product(s) did you have an issue with?</p>
 
-        <div onClick={() => handleClick()} className="dropDownInput">
+        <div
+          ref={inputRef}
+          onClick={() => handleClick()}
+          className="dropDownInput"
+        >
           <p>select Produt(s)</p>
           {checkedItems.length === 1 &&
             `${checkedItems.length} product Selected`}

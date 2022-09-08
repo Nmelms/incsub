@@ -239,7 +239,18 @@ code {
   height: 100px;
 }
 .dropDownInput > p {
+  transition: transform 0.5s;
+  transform: translateY(0px);
   margin-bottom: 0;
+  padding: 0 0.25rem 0 0.25rem;
+  margin-left: 0.25rem;
+}
+.active > p {
+  transition: transform 0.5s;
+  transform: translateY(-30px);
+  background: white;
+  width: min-content;
+  white-space: nowrap;
 }
 .dropDownContent {
   min-height: 100px;
