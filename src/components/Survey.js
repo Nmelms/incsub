@@ -28,7 +28,7 @@ export default function Survey({ setShowSurvey, showSurvey }) {
           <h2>Were Sad to see you go...</h2>
           <p>Can you tell us why you want to cancel your membership?</p>
         </header>
-        <body className="surveyBody">
+        <div className="surveyBody">
           <form className="surveyForm">
             <RadioItem
               setConditional={setConditional}
@@ -49,10 +49,9 @@ export default function Survey({ setShowSurvey, showSurvey }) {
                 name={"cancel_membership"}
                 onChange={(e) => {}}
                 className="solutionTextArea"
-              >
-                what is the better solution? If you dont mind sharing. Your
-                feedback is much appreciated!
-              </textarea>
+                defaultValue="what is the better solution? If you dont mind sharing. Your
+                feedback is much appreciated!"
+              ></textarea>
             )}
             <RadioItem
               setConditional={setConditional}
@@ -109,7 +108,7 @@ export default function Survey({ setShowSurvey, showSurvey }) {
               </button>
             </div>
           </form>
-        </body>
+        </div>
       </div>
     </div>
   );
