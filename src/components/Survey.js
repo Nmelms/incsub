@@ -11,7 +11,6 @@ import Bugs from "./Bugs";
 export default function Survey({ setShowSurvey, showSurvey }) {
   const [response, setResponse] = useState();
   const [conditional, setConditional] = useState();
-  console.log(conditional);
   const btnRef = useRef();
   return (
     <div className="survey">
@@ -48,9 +47,7 @@ export default function Survey({ setShowSurvey, showSurvey }) {
             {conditional === "solution" && (
               <textarea
                 name={"cancel_membership"}
-                onChange={(e) => {
-                  console.log("cahnge");
-                }}
+                onChange={(e) => {}}
                 className="solutionTextArea"
               >
                 what is the better solution? If you dont mind sharing. Your
