@@ -271,6 +271,7 @@ code {
 }
 .active p {
   left: 0;
+  color: blue;
   transition: transform 0.5s;
   transform: translateY(-30px) scale(0.8);
   background: white;
