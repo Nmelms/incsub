@@ -29,6 +29,7 @@ code {
     monospace;
 }
 .modal {
+  min-width: 200px;
   position: absolute;
   align-self: center;
   top: 25%;
