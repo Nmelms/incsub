@@ -25,7 +25,7 @@ export default function Modal({ setShowSurvey }) {
             <p>We hope youre staying safe and Healthy</p>
           </body>
           <div className="modalButtons">
-            <button className="primaryBtn btn">50% off for 6 monthhs</button>
+            <button className="primaryBtn btn">50% off for 6 months</button>
             <button
               onClick={() => setShowSurvey(true)}
               className="cancelBtn btn"

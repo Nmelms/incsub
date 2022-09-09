@@ -249,7 +249,6 @@ code {
 }
 .toggle {
   display: flex;
-  /* white-space: nowrap; */
   padding-bottom: 2rem;
   flex-direction: column;
   justify-content: space-around;

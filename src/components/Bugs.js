@@ -6,7 +6,6 @@ export default function Bugs() {
   const inputRef = useRef();
 
   const handleClick = () => {
-    console.log("click");
     setShowDropDown(!showDropDown);
   };
   useEffect(() => {
@@ -22,7 +21,6 @@ export default function Bugs() {
 
     if (checked) {
       setCheckedItems([...checkedItems, value]);
-      console.log(checkedItems);
     } else {
       const filtered = checkedItems.filter((product) => product !== value);
       setCheckedItems(filtered);
