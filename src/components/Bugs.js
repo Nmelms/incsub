@@ -1,5 +1,8 @@
 import React, { useDebugValue, useEffect, useState, useRef } from "react";
-import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCircleExclamation,
+  faAngleDown,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Bugs() {
@@ -53,6 +56,11 @@ export default function Bugs() {
               {checkedItems.length > 1 &&
                 `${checkedItems.length} products selected`}
             </div>
+            <FontAwesomeIcon
+              className="angleDown"
+              style={{ color: "gray", paddingLeft: ".5rem" }}
+              icon={faAngleDown}
+            />
           </div>
           {showDropDown && (
             <div className="dropDownContent">

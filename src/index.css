@@ -260,6 +260,11 @@ code {
   height: 55px;
   width: 100%;
 }
+.angleDown {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
 
 .active {
   border-color: blue;
