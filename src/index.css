@@ -29,6 +29,7 @@ code {
     monospace;
 }
 .modal {
+  color: rgba(0, 0, 0, 70%);
   max-width: 800px;
   min-width: 200px;
   position: absolute;
@@ -41,6 +42,9 @@ code {
   height: min-content;
   border-radius: 10px;
   box-shadow: 2px 2px 5px 2px lightgray;
+}
+.modal h2 {
+  color: black;
 }
 .closeBtn {
   margin-left: auto;
@@ -100,12 +104,18 @@ code {
 .cancelBtn {
   background-color: white;
   border: none;
+  color: blue;
 }
 .confirmBtn {
+  margin-bottom: 2rem;
+  margin-right: 0;
+  margin-left: auto;
+  font-weight: bold;
+  color: white;
   background-color: red;
-  margin-right: 4rem;
 }
 .confirmBtn:disabled {
+  margin-left: 0;
   background-color: lightgrey;
   cursor: auto;
 }
@@ -182,6 +192,8 @@ code {
   min-width: 120px;
   accent-color: blue;
   border-radius: 25px;
+  border-color: lightgray;
+
   padding: 1rem;
 }
 .radioLabel:hover {
@@ -203,12 +215,14 @@ code {
   background-color: rgb(255, 0, 0, 20%);
 }
 .surveyBtns {
+  margin: 0 4rem 0 4rem;
   display: flex;
   max-width: 100%;
   justify-content: flex-end;
 }
 .backBtn {
   display: flex;
+  height: min-content;
   align-items: center;
   width: min-content;
 }
@@ -216,6 +230,7 @@ code {
   padding-right: 0.5rem;
 }
 .radioBtn {
+  margin-top: 0;
   margin-right: 1rem;
   transform: scale(1.5);
   padding-right: 0.5rem;
@@ -239,6 +254,7 @@ code {
   margin-bottom: 1rem;
 }
 .dropDownInput {
+  border-radius: 5px;
   cursor: pointer;
   position: relative;
   border: 1px solid gray;
@@ -248,6 +264,7 @@ code {
 
 .active {
   border-color: blue;
+  border-radius: 5px 5px 0 0;
 }
 .productText {
   margin-bottom: 0;
@@ -285,6 +302,7 @@ code {
   white-space: nowrap;
 }
 .dropDownContent {
+  border-radius: 0 0 5px 5px;
   min-height: 155px;
   min-width: 100%;
   max-width: 100%;
@@ -307,9 +325,14 @@ code {
 }
 .dropDownContent label:hover {
   background-color: blue;
+  color: white;
+}
+.dropDownContent label:hover > .checkBox {
+  accent-color: white;
 }
 .checkBox {
   margin: 0 0.5rem 0 1rem;
+  accent-color: blue;
 }
 .problemText {
   margin-top: 1rem;

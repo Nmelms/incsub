@@ -37,7 +37,7 @@ export default function RadioItem({ id, value, text, btnRef, setConditional }) {
         id={id}
         value={value}
       />
-      {text}
+      <p style={{ fontWeight: "bold", margin: 0 }}>{text}</p>
     </label>
   );
 }

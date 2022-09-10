@@ -1,4 +1,6 @@
 import React, { useDebugValue, useEffect, useState, useRef } from "react";
+import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Bugs() {
   const [showDropDown, setShowDropDown] = useState(false);
@@ -31,19 +33,25 @@ export default function Bugs() {
   return (
     <>
       <div className="bugs">
-        <p>What product(s) did you have an issue with?</p>
+        <p style={{ fontWeight: "bold" }}>
+          What product(s) did you have an issue with?{" "}
+          <FontAwesomeIcon
+            style={{ color: "gray", paddingLeft: ".5rem" }}
+            icon={faCircleExclamation}
+          />
+        </p>
         <div className="productDiv">
           <div
             ref={inputRef}
             onClick={() => handleClick()}
             className="dropDownInput"
           >
-            <p>select Produt(s)</p>
+            <p>Select Product(s)</p>
             <div className="productNumber">
               {checkedItems.length === 1 &&
-                `${checkedItems.length} product Selected`}
+                `${checkedItems.length} product selected`}
               {checkedItems.length > 1 &&
-                `${checkedItems.length} products Selected`}
+                `${checkedItems.length} products selected`}
             </div>
           </div>
           {showDropDown && (
@@ -57,7 +65,7 @@ export default function Bugs() {
                   id="product1"
                   type="checkbox"
                 />
-                product1
+                Product #1
               </label>
               <label htmlFor="product2">
                 <input
@@ -68,7 +76,7 @@ export default function Bugs() {
                   id="product2"
                   type="checkbox"
                 />
-                product2
+                Product #2
               </label>
               <label htmlFor="product3">
                 <input
@@ -79,31 +87,37 @@ export default function Bugs() {
                   id="product3"
                   type="checkbox"
                 />
-                product3
+                Product #3
               </label>
             </div>
           )}
         </div>
 
         <div className="toggle">
-          <p>What was it?</p>
+          <p style={{ fontWeight: "bold" }}>What was it?</p>
           <div className="problemBtns">
             <div>
               <label className="btnLabel" htmlFor="one">
                 <input type="radio" id="one" name="problems" />
-                <span>One Problem</span>
+                <span style={{ fontWeight: "bold" }}>One Major Problem</span>
               </label>
             </div>
             <div>
               <label htmlFor="various">
                 <input type="radio" id="various" name="problems" />
-                <span>various problems</span>
+                <span style={{ fontWeight: "bold" }}>Various Problems</span>
               </label>
             </div>
           </div>
         </div>
         <div className="problemText">
-          <p>What problem(s) did you encounter</p>
+          <p style={{ fontWeight: "bold" }}>
+            What problem(s) did you encounter?{" "}
+            <FontAwesomeIcon
+              style={{ color: "gray", paddingLeft: ".5rem" }}
+              icon={faCircleExclamation}
+            />
+          </p>
           <textarea></textarea>
         </div>
       </div>

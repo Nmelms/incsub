@@ -26,7 +26,7 @@ export default function Survey({ setShowSurvey, showSurvey }) {
       </nav>
       <div className="form">
         <header className="surveyHeader">
-          <h2>Were Sad to see you go...</h2>
+          <h2>We're sad to see you go...</h2>
           <p>Can you tell us why you want to cancel your membership?</p>
         </header>
         <div className="surveyBody">
@@ -36,7 +36,7 @@ export default function Survey({ setShowSurvey, showSurvey }) {
               btnRef={btnRef}
               id={"membership"}
               value={"membership"}
-              text={"I didnt realize it was a reoccuring membership"}
+              text={"I didn't realize it was a reoccuring membership"}
             />
             <RadioItem
               setConditional={setConditional}
@@ -50,7 +50,7 @@ export default function Survey({ setShowSurvey, showSurvey }) {
                 name={"cancel_membership"}
                 onChange={(e) => {}}
                 className="solutionTextArea"
-                defaultValue="what is the better solution? If you dont mind sharing. Your
+                defaultValue="What is the better solution? If you don't mind sharing. Your
                 feedback is much appreciated!"
               ></textarea>
             )}
@@ -59,14 +59,14 @@ export default function Survey({ setShowSurvey, showSurvey }) {
               btnRef={btnRef}
               id={"price"}
               value={"price"}
-              text={"its too expensive"}
+              text={"It's too expensive"}
             />
             <RadioItem
               setConditional={setConditional}
               btnRef={btnRef}
               id={"bugs"}
               value={"bugs"}
-              text={"bugs, things not working properly"}
+              text={"Bugs, things not working properly"}
             />
             {conditional === "bugs" && <Bugs />}
             <RadioItem
@@ -88,7 +88,7 @@ export default function Survey({ setShowSurvey, showSurvey }) {
               btnRef={btnRef}
               id={"other"}
               value={"other"}
-              text={"other"}
+              text={"Other"}
             />
             <Alert />
             <div className=" surveyBtns">
@@ -105,7 +105,7 @@ export default function Survey({ setShowSurvey, showSurvey }) {
                 ref={btnRef}
                 disabled={true}
               >
-                cancel membership
+                Cancel Membership
               </button>
             </div>
           </form>
