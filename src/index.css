@@ -239,10 +239,15 @@ code {
   margin-bottom: 1rem;
 }
 .dropDownInput {
+  cursor: pointer;
   position: relative;
-  border: 1px solid blue;
+  border: 1px solid gray;
   height: 55px;
   width: 100%;
+}
+
+.active {
+  border-color: blue;
 }
 .productText {
   margin-bottom: 0;
@@ -293,6 +298,18 @@ code {
   bottom: 0;
   margin-bottom: -155px;
   z-index: 3;
+}
+.dropDownContent label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+.dropDownContent label:hover {
+  background-color: blue;
+}
+.checkBox {
+  margin: 0 0.5rem 0 1rem;
 }
 .problemText {
   margin-top: 1rem;

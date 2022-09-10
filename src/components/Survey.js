@@ -12,6 +12,7 @@ export default function Survey({ setShowSurvey, showSurvey }) {
   const [response, setResponse] = useState();
   const [conditional, setConditional] = useState();
   const btnRef = useRef();
+
   return (
     <div className="survey">
       <nav className="surveyNav">

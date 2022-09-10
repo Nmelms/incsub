@@ -8,6 +8,7 @@ export default function Bugs() {
   const handleClick = () => {
     setShowDropDown(!showDropDown);
   };
+
   useEffect(() => {
     if (showDropDown || checkedItems.length > 0) {
       inputRef.current.classList.add("active");
@@ -16,9 +17,9 @@ export default function Bugs() {
     }
   }, [checkedItems, showDropDown]);
 
+  //removed checked item from count when it is deselected
   const handleCheck = (e) => {
     const { value, checked } = e.target;
-
     if (checked) {
       setCheckedItems([...checkedItems, value]);
     } else {
@@ -49,6 +50,7 @@ export default function Bugs() {
             <div className="dropDownContent">
               <label htmlFor="product1">
                 <input
+                  className="checkBox"
                   onChange={(e) => handleCheck(e)}
                   checked={checkedItems.includes("product1") ? true : false}
                   value="product1"
@@ -59,6 +61,7 @@ export default function Bugs() {
               </label>
               <label htmlFor="product2">
                 <input
+                  className="checkBox"
                   onChange={(e) => handleCheck(e)}
                   checked={checkedItems.includes("product2") ? true : false}
                   value="product2"
@@ -69,6 +72,7 @@ export default function Bugs() {
               </label>
               <label htmlFor="product3">
                 <input
+                  className="checkBox"
                   onChange={(e) => handleCheck(e)}
                   checked={checkedItems.includes("product3") ? true : false}
                   value="product3"
